@@ -318,6 +318,9 @@ a {
     padding: 5px;
     cursor: pointer;
 }
+.course_back h4{
+    max-width: 90%;
+}
 .courses_title {
     color: var(--green);
     font-size: 40px;
