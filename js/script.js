@@ -40,7 +40,6 @@ function animateCounters() {
             requestAnimationFrame(updateCounters);
         }
     }
-    
     requestAnimationFrame(updateCounters);
 }
 
@@ -82,4 +81,12 @@ courseButtons.forEach(btn =>{
       activeCourse.classList.add("active")
   }
     
+})
+
+const backBtns = [...document.querySelectorAll(".back_btn")]
+backBtns.forEach(btn =>{
+    btn.onclick = () =>{
+        const parent = btn.closest(".course_card")
+        parent.classList.remove("active")
+    }
 })
