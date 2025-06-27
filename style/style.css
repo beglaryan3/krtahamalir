@@ -303,7 +303,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    grid-auto-rows: minmax(450px,auto);
+    grid-auto-rows: minmax(470px,auto);
     gap: 50px;
     perspective: 3000px;
 }
