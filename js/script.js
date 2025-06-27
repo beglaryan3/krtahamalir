@@ -1,3 +1,13 @@
+// burger menu
+const burgerBtn = document.querySelector(".burger_menu")
+const menu = document.querySelector(".nav")
+burgerBtn.onclick = () => {
+    menu.classList.toggle("show")
+    document.querySelectorAll(".burger_line").forEach(i => i.classList.toggle("active"))
+}
+
+
+
 const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
