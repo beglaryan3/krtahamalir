@@ -6,8 +6,16 @@ burgerBtn.onclick = () => {
     document.querySelectorAll(".burger_line").forEach(i => i.classList.toggle("active"))
 }
 
+// header fix
+const headerEleement = document.querySelector(".header")
+
+window.addEventListener("scroll", function () {
+    let scrolValue = scrollY
+    scrolValue > 380 ? headerEleement.classList.add("fixed") : headerEleement.classList.remove("fixed")
+})
 
 
+// Slider
 const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -26,26 +34,27 @@ const swiper = new Swiper(".mySwiper", {
     },
 });
 
-let countersAnimated = false;
 
+
+let countersAnimated = false;
 function animateCounters() {
     if (countersAnimated) return;
     countersAnimated = true;
-    
+
     const counters = document.querySelectorAll('.count');
-    const duration = 1000; 
+    const duration = 1000;
     const startTime = performance.now();
-    
+
     function updateCounters(currentTime) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        
+
         counters.forEach(counter => {
             const target = +counter.getAttribute('data-count');
             const value = Math.floor(progress * target);
             counter.textContent = value;
         });
-        
+
         if (progress < 1) {
             requestAnimationFrame(updateCounters);
         }
@@ -57,8 +66,8 @@ function animateCounters() {
 function initCounterAnimation() {
     const aboutSection = document.querySelector('.about');
     if (!aboutSection) return;
-    
-   
+
+
     if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -70,10 +79,10 @@ function initCounterAnimation() {
         }, {
             threshold: 0.5
         });
-        
+
         observer.observe(aboutSection);
     } else {
-        
+
         animateCounters();
     }
 }
@@ -83,19 +92,19 @@ document.addEventListener('DOMContentLoaded', initCounterAnimation);
 
 // cours cards
 const courseButtons = [...document.querySelectorAll(".course_btn")]
-courseButtons.forEach(btn =>{
-  btn.onclick = () => {
-      let activeCourse = btn.closest(".course_card")
-      const allCards = [...document.querySelectorAll(".course_card")]
-      allCards.forEach(card => card.classList.remove("active"))
-      activeCourse.classList.add("active")
-  }
-    
+courseButtons.forEach(btn => {
+    btn.onclick = () => {
+        let activeCourse = btn.closest(".course_card")
+        const allCards = [...document.querySelectorAll(".course_card")]
+        allCards.forEach(card => card.classList.remove("active"))
+        activeCourse.classList.add("active")
+    }
+
 })
 
 const backBtns = [...document.querySelectorAll(".back_btn")]
-backBtns.forEach(btn =>{
-    btn.onclick = () =>{
+backBtns.forEach(btn => {
+    btn.onclick = () => {
         const parent = btn.closest(".course_card")
         parent.classList.remove("active")
     }

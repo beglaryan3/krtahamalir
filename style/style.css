@@ -64,6 +64,12 @@ a {
     background: var(--light);
 
 }
+
+.header.fixed{
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 15px var(--green);
+}
 .header .container {
     height: 100px;
     display: flex;
@@ -321,6 +327,8 @@ a {
 .course_card {
     position: relative;
     perspective: 1000px;
+
+
 }
 
 .course_card.active .course {
@@ -335,7 +343,7 @@ a {
     transition: .5s;
     border-radius: 30px;
     padding: 15px;
-
+  
     position: relative;
     transform-style: preserve-3d;
 }
@@ -360,6 +368,7 @@ a {
 }
 
 .course_back {
+ 
     width: 100%;
     height: 100%;
     transform: rotateY(180deg);
