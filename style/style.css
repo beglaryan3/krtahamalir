@@ -69,6 +69,15 @@ a {
     position: sticky;
     top: 0;
     box-shadow: 0 2px 15px var(--green);
+    animation: headerFixed .3s linear forwards;
+}
+
+@keyframes headerFixed{
+    from{
+        transform: translateY(-100%);
+    }to{
+        transform: translateY(0);
+    }
 }
 .header .container {
     height: 100px;
@@ -309,7 +318,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
-    grid-auto-rows: minmax(470px,auto);
+    grid-auto-rows: minmax(490px,auto);
     gap: 50px;
     perspective: 3000px;
 }
@@ -519,17 +528,42 @@ a {
 .staff_title{
     text-align: center;
     margin-bottom: 30px;
+    color: var(--green);
+    font-size: 35px;
 }
 
 .staff_body{
     display: grid;
     grid-template-columns: repeat(auto-fill,250px);
-    grid-auto-rows: 300px;
+    grid-auto-rows: minmax(300px,auto);
     gap: 30px;
     justify-content: center;
 }
 
 .staf_item{
-    border: 1px solid;
+    border: 1px solid var(--borderColor);
+    background: var(--iconBg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    border-radius: 20px;
+    padding: 15px;
+    transition: .3s;
 
+}
+.staf_item:hover{
+     box-shadow: 0 0 25px var(--borderColor);
+     transform: scale(1.1);
+}
+.staff_image{
+    width: 150px;
+}
+
+@media(max-width:560px){
+    .staff_body{
+        grid-template-columns: repeat(2,1fr);
+        padding-inline: 20px;
+    }
 }
