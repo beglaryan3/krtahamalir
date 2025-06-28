@@ -574,7 +574,7 @@ a {
 .footer{
     width: 100%;
     min-height: 400px;
-    background: var(--green);
+    background: var(--darkBg);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -590,8 +590,9 @@ a {
 .footer_main{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
+    gap: 100px;
 }
 .footer_item{
     display: flex;
@@ -614,10 +615,10 @@ a {
 
 .footer_lists{
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 100px;
 }
 
 .footer_list{
