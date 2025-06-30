@@ -69,10 +69,10 @@ a {
     position: sticky;
     top: 0;
     box-shadow: 0 2px 15px var(--green);
-    animation: headerFixed .3s linear forwards;
+    -webkit-animation: headerFixed .3s linear forwards;
 }
 
-@keyframes headerFixed{
+@-webkit-keyframes headerFixed{
     from{
         transform: translateY(-100%);
     }to{
