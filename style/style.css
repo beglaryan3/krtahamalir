@@ -573,8 +573,7 @@ a {
 }
 
 .staf_item:hover {
-    box-shadow: 0 0 25px var(--borderColor);
-    transform: scale(1.1);
+    box-shadow: 0 0 25px var(--green);
 }
 
 .staff_image {
@@ -613,6 +612,7 @@ a {
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    padding-block: 15px;
 }
 
 .footer_item {
@@ -675,6 +675,10 @@ a {
     }
     .footer_list{
         width: 40%;
+    }
+    .footer_list{
+        gap: 20px;
+
     }
 }
 

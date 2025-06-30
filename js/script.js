@@ -5,6 +5,10 @@ burgerBtn.onclick = () => {
     menu.classList.toggle("show")
     document.querySelectorAll(".burger_line").forEach(i => i.classList.toggle("active"))
 }
+const navLinks = [...document.querySelectorAll(".nav_link")]
+navLinks.forEach(link => {
+    link.onclick = () => menu.classList.remove("show")
+})
 
 // header fix
 const headerEleement = document.querySelector(".header")
