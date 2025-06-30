@@ -221,6 +221,7 @@ a {
     width: 100%;
     background: var(--iconBg);
     padding-block: 30px;
+    min-width: 375px;
 }
 
 .hero .container {
@@ -489,6 +490,7 @@ a {
     padding: 20px 0;
     color: var(--light);
     margin-top: 50px;
+    min-width: 375px;
 }
 
 .about_title {
