@@ -21,22 +21,30 @@ window.addEventListener("scroll", function () {
     scrolValue > 380 ? headerEleement.classList.add("fixed") : headerEleement.classList.remove("fixed")
 })
 
+const logo = document.querySelector(".logo")
+logo.addEventListener("click", function (e) {
+    e.preventDefault()
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+})
 // scroll button
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 1000) {
-    scrollToTopBtn.classList.add("show");
-  } else {
-    scrollToTopBtn.classList.remove("show");
-  }
+    if (window.pageYOffset > 1000) {
+        scrollToTopBtn.classList.add("show");
+    } else {
+        scrollToTopBtn.classList.remove("show");
+    }
 
 });
 
 scrollToTopBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
 
 
