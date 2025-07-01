@@ -601,24 +601,29 @@
                     <div class="form_container">
                         <h2 class="form_title">Գրանցման հայտ</h2>
                         <div class="form_item">
-                            <label for="name" class="label">Անուն</label>
-                            <input type="text" id="name" name="name">
+                            <label for="name" class="label">Անուն Ազգանուն</label>
+                            <input type="text" id="name" name="name" required placeholder="Գրեք Ձեր անուն ազգանունը">
                         </div>
                         <div class="form_item">
                             <label for="email" class="label">Էլ. հասցե</label>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email" required placeholder="Գրեք էլ․ հասցեն">
                         </div>
                         <div class="form_item">
                             <label for="phone" class="label">Հեռախոս</label>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone" required placeholder="Գրեք Ձեր հեռախոսահամրը">
                         </div>
                         <div class="form_item">
                             <label for="course_select" class="label">Դասընթաց</label>
-                            <select name="curse" id="course_select">
+                            <select name="curse" id="course_select" required>
                                 <option value="" selected disabled>Ընտրել դասընթաց</option>
-                                <option value="WEB">WEB</option>
+                                <option value="WEB">WEB Ծրագրավորում</option>
                                 <option value="Grafik Design">Grafik Design</option>
                                 <option value="Python">Python</option>
+                                <option value="Interior Design">Interior Design</option>
+                                <option value="SMM">SMM</option>
+                                <option value="Reel Making">Reel Making</option>
+                                <option value="photo">Լուսանկարչություն</option>
+                                <option value="UX/UI">UX/UI</option>
                             </select>
                         </div>
                         <div class="form_item">
@@ -836,7 +841,6 @@
             Էլբակյան Կրթահամալիր
         </p>
     </footer>
-
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

@@ -116,3 +116,26 @@ backBtns.forEach(btn => {
         parent.classList.remove("active")
     }
 })
+
+// form
+
+const contactForm = document.querySelector(".contact_form")
+const userName = document.getElementById('name');
+const phone = document.getElementById('phone');
+userName.addEventListener('input', () => {
+    userName.value = userName.value.replace(/[^A-Za-zА-Яа-яЁё\s\-]/g, '');
+});
+
+phone.addEventListener('input', () => {
+    phone.value = phone.value.replace(/\D/g, '');
+});
+contactForm.addEventListener("submit", function (e) {
+    e.preventDefault()
+    const formData = new FormData(contactForm);
+    const data = {};
+    formData.forEach((value, key) => {
+        data[key] = value;
+    });
+    console.log(data);
+    contactForm.reset()
+})

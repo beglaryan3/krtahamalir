@@ -632,12 +632,17 @@ a {
     border: none;
     border-radius: 10px;
     height: 40px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 #coment{
     height: 200px;
     resize: none;
     padding: 5px;
+    border-radius: 15px;
+    border: 1px solid var(--borderColor);
+    outline: none;
 }
 
 
@@ -667,6 +672,11 @@ a {
     }
 }
 
+@media(max-width:500px){
+    .form_item{
+        flex-basis: 100%;
+    }
+}
 
 /* staff */
 
