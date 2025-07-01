@@ -85,7 +85,7 @@ function animateCounters() {
         counters.forEach(counter => {
             const target = +counter.getAttribute('data-count');
             const value = Math.floor(progress * target);
-            counter.textContent = value;
+            counter.textContent = value + "+";
         });
 
         if (progress < 1) {
@@ -165,3 +165,8 @@ contactForm.addEventListener("submit", function (e) {
     console.log(data);
     contactForm.reset()
 })
+
+
+
+
+
