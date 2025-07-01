@@ -21,6 +21,24 @@ window.addEventListener("scroll", function () {
     scrolValue > 380 ? headerEleement.classList.add("fixed") : headerEleement.classList.remove("fixed")
 })
 
+// scroll button
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 1000) {
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
 
 // Slider
 const swiper = new Swiper(".mySwiper", {
